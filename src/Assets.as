@@ -1,32 +1,35 @@
 package
 {
+	import flash.display.Bitmap;
 	import flash.utils.Dictionary;
+	
+	import starling.textures.Texture;
 
 	public class Assets
 	{
-		[Embed(source="../graphics/bgwolcome.jpg")]
-		public static const bgwelcome:class;
+		[Embed(source="../media/graphics/bgWelcome.jpg")]
+		public static const bgWelcome:Class;
 		
-		[Embed(source="../graphics/welcome_hero.png")]
-		public static const welcomeHero:class;
+		[Embed(source="../media/graphics/welcome_hero.png")]
+		public static const welcomeHero:Class;
 		
-		[Embed(source="../graphics/welcome_title.png")]
-		public static const welcomeTitle:class;
+		[Embed(source="../media/graphics/welcome_title.png")]
+		public static const welcomeTitle:Class;
 		
-		[Embed(source="../graphics/welcome_playButton.png")]
-		public static const welcomePlayBtn:class;
+		[Embed(source="../media/graphics/welcome_playButton.png")]
+		public static const welcomePlayBtn:Class;
 		
-		[Embed(source="../graphics/welcome_aboutButton.png")]
-		public static const welcomeAboutBtn:class;
+		[Embed(source="../media/graphics/welcome_aboutButton.png")]
+		public static const welcomeAboutBtn:Class;
 		
 		private static var gameTextures:Dictionary = new Dictionary();
 		
-		public static function getTexture(name:String:Texture
+		public static function getTexture(name:String):Texture
 										  {								  
 			if (gameTextures[name] == undefined)
 			{
-				var bitmap=Bitmap = new Assets[name]();
-				gameTextures[name] = Texture.fromBitmap(bitmap):
+				var bitmap:Bitmap = new Assets[name]();
+				gameTextures[name] = Texture.fromBitmap(bitmap);
 			}
 			return gameTextures[name];
 										  }	
