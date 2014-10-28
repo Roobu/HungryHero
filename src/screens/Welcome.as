@@ -12,7 +12,7 @@ package screens
 		private var hero:Image;
 		
 		private var playBtn:Button;
-		private var aboutBnt:Button;
+		private var aboutBtn:Button;
 		
 		
 		public function Welcome()
@@ -40,8 +40,18 @@ package screens
 			title.y = 20;	
 			this.addChild(title);
 			
-			bg = new Image(Assets.getTexture("WelcomeHero"));
+			hero = new Image(Assets.getTexture("WelcomeHero"));
 			this.addChild(hero);
+			
+			playBtn = new Button(Assets.getTexture("WelcomePlayBtn"));
+			playBtn.x = 500;
+			playBtn.y = 260;
+			this.addChild(playBtn);
+			
+			aboutBtn = new Button(Assets.getTexture("WelcomeAboutBtn"));
+			aboutBtn.x = 410;
+			aboutBtn.y = 380; 	
+			this.addChild(aboutBtn);
 			
 		}
 			
