@@ -22,6 +22,8 @@ package
 			
 			screenWelcome = new Welcome();
 			this.addChild(screenWelcome);
+			screenWelcome.initialized();
+			
 		}
 	}
 }
